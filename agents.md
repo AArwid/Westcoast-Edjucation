@@ -7,7 +7,7 @@ This file is used by the development agent (GitHub Copilot) for planning and tra
 The repository is a simple TypeScript-based single‑page application for a fictitious car gallery called **WestCoast Cars**. It follows a modular folder structure: data models, interfaces, HTTP client, and page-specific code. Key features:
 
 - **TypeScript for all logic** (`.ts` files) with type definitions (`interfaces` and `models`).
-- **Static JSON data** (`data/vehicles.json`) served via a lightweight HTTP client abstraction.
+- **Static JSON data** (`data/courses.json`, `data/classrooms.json`) served via a lightweight HTTP client abstraction.
 - **Pages**: gallery, vehicle details, about, contact, each with its own HTML, CSS, and logic.
 - **Unit tests** written in plain JavaScript for DOM interaction (`.test.js` files).
 - **CSS modules** for layout and visual styling under `src/assets` and page-specific CSS.
@@ -26,7 +26,7 @@ The project structure mirrors the pattern outlined in the specification: clear s
 4. **Data model alignment**
    - Check `vehicle.ts`, `post.ts`, `enums.ts` against requirements.
 5. **Page features and tests**
-   - Gallery page: load all vehicles, create DOM elements, unit test coverage.
+   - Gallery page: load all courses, create DOM elements, unit test coverage.
    - Vehicle details page: parse query string, display details, unit tests.
    - Contact page: form validation and submission behavior, basic unit tests.
    - About page: static content, styling.
