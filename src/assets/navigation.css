@@ -1,0 +1,50 @@
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-brand:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  transform: rotate(180deg);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-user {
+  color: #a5d6a7;
+  font-weight: 600;
+}
+
+.nav-logout-btn {
+  background: transparent;
+  border: 1px solid #a5d6a7;
+  color: #a5d6a7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.nav-logout-btn:hover {
+  background: rgba(165, 214, 167, 0.2);
+}

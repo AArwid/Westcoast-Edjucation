@@ -1,0 +1,57 @@
+.details {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.details h2 {
+  margin-bottom: 0.75rem;
+  color: #1a2a3a;
+}
+
+.details p {
+  margin-bottom: 0.5rem;
+}
+
+.details-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
+
+#booking-list h3 {
+  margin-top: 1.5rem;
+  color: #1a2a3a;
+}
+
+#booking-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#booking-list li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.auth-toggle {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.auth-toggle a {
+  color: #1a6b3c;
+  font-weight: 600;
+}
