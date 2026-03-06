@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WestCoast Education – Admin</title>
+    <link rel="stylesheet" href="src/assets/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-brand">
+        <img src="src/assets/logo.svg" alt="Logo" class="nav-logo" />
+        <span>Westcoast Education</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Kurser</a>
+        <a href="classrooms.html">Klassrum</a>
+        <a href="about.html">Om oss</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logga in</a>
+      </div>
+    </nav>
+    <main>
+      <div id="admin-login-section" class="form-container">
+        <h1>Admin-inloggning</h1>
+        <form id="admin-login-form">
+          <div>
+            <label for="admin-user">Användarnamn</label>
+            <input type="text" id="admin-user" name="admin-user" />
+          </div>
+          <div>
+            <label for="admin-pass">Lösenord</label>
+            <input type="password" id="admin-pass" name="admin-pass" />
+          </div>
+          <button type="submit">Logga in</button>
+        </form>
+      </div>
+
+      <div id="admin-content" class="hidden">
+        <div style="text-align: right; margin-bottom: 1rem">
+          <button id="admin-logout-btn" class="btn btn-logout">
+            Logga ut (admin)
+          </button>
+        </div>
+        <div class="form-container">
+          <h1>Lägg till kurs</h1>
+          <form id="admin-course-form">
+            <div>
+              <label for="title">Kurstitel</label>
+              <input type="text" id="title" name="title" />
+            </div>
+            <div>
+              <label for="courseNumber">Kursnummer</label>
+              <input type="text" id="courseNumber" name="courseNumber" />
+            </div>
+            <div>
+              <label for="days">Antal dagar</label>
+              <input type="number" id="days" name="days" min="1" />
+            </div>
+            <div>
+              <label for="price">Kostnad (SEK)</label>
+              <input type="number" id="price" name="price" min="0" />
+            </div>
+            <div>
+              <label for="startDate">Startdatum</label>
+              <input type="date" id="startDate" name="startDate" />
+            </div>
+            <div>
+              <label for="imageUrl">Bild-URL</label>
+              <input
+                type="text"
+                id="imageUrl"
+                name="imageUrl"
+                placeholder="https://picsum.photos/seed/kurs/400/200"
+              />
+            </div>
+            <div>
+              <label for="description">Beskrivning</label>
+              <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" id="isClassroom" name="isClassroom" />
+                Klassrum</label
+              >
+              <label
+                ><input type="checkbox" id="isDistance" name="isDistance" />
+                Distans</label
+              >
+            </div>
+            <button type="submit">Lägg till</button>
+          </form>
+        </div>
+        <div class="admin-columns">
+          <section>
+            <h2>Tillagda kurser</h2>
+            <div id="admin-course-list"></div>
+          </section>
+          <section>
+            <h2>Borttagna kurser</h2>
+            <div id="deleted-course-list"></div>
+          </section>
+        </div>
+        <section>
+          <h2>Bokningar per kurs</h2>
+          <div id="booking-list"></div>
+        </section>
+      </div>
+    </main>
+    <script type="module">
+      import { setupNavAuth } from "./dist/utils/navAuth.js";
+      import { setupAdminPage } from "./dist/pages/admin.js";
+      setupNavAuth();
+      setupAdminPage();
+    </script>
+  </body>
+</html>

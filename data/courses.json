@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Fullstack Webbutveckling",
+    "courseNumber": "WE-101",
+    "days": 30,
+    "price": 15000,
+    "isClassroom": true,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-09-01",
+    "description": "Lär dig bygga moderna webbapplikationer med HTML, CSS, JavaScript och TypeScript. Kursen täcker både frontend och backend med praktiska projekt."
+  },
+  {
+    "id": 2,
+    "title": "React & TypeScript",
+    "courseNumber": "WE-202",
+    "days": 15,
+    "price": 12000,
+    "isClassroom": true,
+    "isDistance": false,
+    "imageUrl": "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-10-15",
+    "description": "Fördjupa dig i React med TypeScript. Bygg komponentbaserade SPA-applikationer med modern state-hantering och routing."
+  },
+  {
+    "id": 3,
+    "title": "Node.js Backend-utveckling",
+    "courseNumber": "WE-303",
+    "days": 20,
+    "price": 13500,
+    "isClassroom": false,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-11-01",
+    "description": "Bygg robusta REST-API:er och serverapplikationer med Node.js, Express och MongoDB. Inkluderar autentisering och deployment."
+  },
+  {
+    "id": 4,
+    "title": "Mobilutveckling med React Native",
+    "courseNumber": "WE-404",
+    "days": 25,
+    "price": 14000,
+    "isClassroom": true,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2027-01-10",
+    "description": "Utveckla mobilappar för iOS och Android med React Native. Från grunderna till publicering i app-butiker."
+  },
+  {
+    "id": 5,
+    "title": "DevOps & CI/CD",
+    "courseNumber": "WE-505",
+    "days": 10,
+    "price": 9500,
+    "isClassroom": true,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-08-20",
+    "description": "Lär dig Docker, Kubernetes, GitHub Actions och moderna CI/CD-pipelines för automatiserad leverans av mjukvara."
+  },
+  {
+    "id": 6,
+    "title": "Python för Dataanalys",
+    "courseNumber": "WE-606",
+    "days": 12,
+    "price": 11000,
+    "isClassroom": true,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-09-15",
+    "description": "Introduktion till Python med fokus på dataanalys. Lär dig Pandas, NumPy och matplotlib för att hantera och visualisera data."
+  },
+  {
+    "id": 7,
+    "title": "UX/UI Design för Utvecklare",
+    "courseNumber": "WE-707",
+    "days": 8,
+    "price": 8500,
+    "isClassroom": true,
+    "isDistance": false,
+    "imageUrl": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-12-01",
+    "description": "Lär dig grunderna i UX-design, wireframing och prototyping med Figma. Perfekt för utvecklare som vill förstå designprocessen."
+  },
+  {
+    "id": 8,
+    "title": "Databaser & SQL",
+    "courseNumber": "WE-808",
+    "days": 10,
+    "price": 9000,
+    "isClassroom": false,
+    "isDistance": true,
+    "imageUrl": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "startDate": "2026-10-01",
+    "description": "Databasdesign med SQL Server och PostgreSQL. Lär dig normalisering, avancerade queries, indexering och prestandaoptimering."
+  }
+]
