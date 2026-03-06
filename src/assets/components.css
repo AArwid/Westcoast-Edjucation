@@ -6,6 +6,8 @@
 }
 
 .course-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 0;
@@ -28,6 +30,11 @@
 .course-card p,
 .course-card a {
   padding: 0 1rem;
+}
+
+.course-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .course-card h3 {
