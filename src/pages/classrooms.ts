@@ -24,7 +24,7 @@ export async function setupClassroomsPage(): Promise<void> {
   if (!container) return;
 
   if (!isLoggedIn()) {
-    const redirectUrl = `login.html?redirect=${encodeURIComponent(window.location.href)}`;
+    const redirectUrl = `pages/login.html?redirect=${encodeURIComponent(window.location.href)}`;
     window.location.href = redirectUrl;
     return;
   }

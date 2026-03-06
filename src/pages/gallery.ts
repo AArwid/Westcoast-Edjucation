@@ -44,7 +44,7 @@ export async function loadGallery(containerId = "gallery"): Promise<void> {
       <p>${course.price} SEK</p>
       <p>Start: ${course.startDate}</p>
       <p>${availability.join(" / ")}</p>
-      <a href="details.html?id=${course.id}" class="btn">Visa detaljer</a>
+      <a href="pages/details.html?id=${course.id}" class="btn">Visa detaljer</a>
     `;
     container.appendChild(card);
   });

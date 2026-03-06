@@ -2,7 +2,7 @@ import { getCurrentUser, logout, isLoggedIn } from "./auth.js";
 
 export function setupNavAuth(): void {
   const loginLink = document.querySelector<HTMLAnchorElement>(
-    '.nav-links a[href="login.html"]',
+    '.nav-links a[href="pages/login.html"]',
   );
   if (!loginLink) return;
 

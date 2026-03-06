@@ -8,7 +8,7 @@ export function setupBookingForm(formId = "booking-form"): void {
   const courseTitle = params.get("courseTitle");
 
   if (!isLoggedIn()) {
-    const redirectUrl = `login.html?redirect=${encodeURIComponent(window.location.href)}`;
+    const redirectUrl = `pages/login.html?redirect=${encodeURIComponent(window.location.href)}`;
     window.location.href = redirectUrl;
     return;
   }

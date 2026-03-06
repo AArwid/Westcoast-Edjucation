@@ -61,6 +61,6 @@ export async function loadCourseDetails(
     <p><strong>Startdatum:</strong> ${course.startDate}</p>
     <p><strong>Tillgänglig som:</strong> ${availability.join(", ")}</p>
     <p>${course.description}</p>
-    <a href="booking.html?courseId=${course.id}&courseTitle=${encodeURIComponent(course.title)}" class="btn">Boka kurs</a>
+    <a href="pages/booking.html?courseId=${course.id}&courseTitle=${encodeURIComponent(course.title)}" class="btn">Boka kurs</a>
   `;
 }
