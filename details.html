@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WestCoast Education – Kursdetaljer</title>
+    <link rel="stylesheet" href="src/assets/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-brand">
+        <img src="src/assets/logo.svg" alt="Logo" class="nav-logo" />
+        <span>Westcoast Education</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Kurser</a>
+        <a href="classrooms.html">Klassrum</a>
+        <a href="about.html">Om oss</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logga in</a>
+      </div>
+    </nav>
+    <main>
+      <div id="course-details"></div>
+    </main>
+    <script type="module">
+      import { setupNavAuth } from "./dist/utils/navAuth.js";
+      import { loadCourseDetails } from "./dist/pages/details.js";
+      setupNavAuth();
+      loadCourseDetails();
+    </script>
+  </body>
+</html>

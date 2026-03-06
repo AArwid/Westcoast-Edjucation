@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WestCoast Education – Boka kurs</title>
+    <link rel="stylesheet" href="src/assets/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-brand">
+        <img src="src/assets/logo.svg" alt="Logo" class="nav-logo" />
+        <span>Westcoast Education</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Kurser</a>
+        <a href="classrooms.html">Klassrum</a>
+        <a href="about.html">Om oss</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logga in</a>
+      </div>
+    </nav>
+    <main>
+      <div class="form-container">
+        <h1>Boka kurs</h1>
+        <p id="booking-course-info"></p>
+        <form id="booking-form">
+          <div>
+            <label for="customerName">Kundnamn</label>
+            <input type="text" id="customerName" name="customerName" />
+          </div>
+          <div>
+            <label for="billingAddress">Faktureringsadress</label>
+            <input type="text" id="billingAddress" name="billingAddress" />
+          </div>
+          <div>
+            <label for="email">E-postadress</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label for="mobile">Mobilnummer</label>
+            <input type="tel" id="mobile" name="mobile" />
+          </div>
+          <div>
+            <label for="attendanceType">Typ</label>
+            <select id="attendanceType" name="attendanceType">
+              <option value="Classroom">Klassrum</option>
+              <option value="Distance">Distans</option>
+            </select>
+          </div>
+          <button type="submit">Boka</button>
+        </form>
+      </div>
+    </main>
+    <script type="module">
+      import { setupNavAuth } from "./dist/utils/navAuth.js";
+      import { setupBookingForm } from "./dist/pages/booking.js";
+      setupNavAuth();
+      setupBookingForm();
+    </script>
+  </body>
+</html>
