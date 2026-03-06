@@ -14,7 +14,7 @@ export function initializeAboutPage(containerId = "about"): void {
       Vårt koncept är att erbjuda både klassrumsutbildningar och distansutbildningar
       där elever och lärare möts. Vi satsar nu även stort på on-demand-kurser —
       färdiginspelade utbildningar tillgängliga för visning i webbläsare,
-      mobila enheter samt för nedladdning.
+      mobila enheter samt för nedladdning. 
     </p>
     <p>
       Hos oss hittar du tekniska IT-utbildningar i framkant. Välkommen att utforska

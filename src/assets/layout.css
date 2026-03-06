@@ -1,3 +1,9 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
   background-color: #1a2a3a;
   color: #fff;
@@ -10,6 +16,8 @@ nav {
 }
 
 main {
+  flex: 1;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -26,4 +34,13 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  background-color: transparent;
+  font-size: 0.95rem;
 }
