@@ -14,13 +14,13 @@ export interface IClassroomBooking {
   studentName: string;
   studentEmail: string;
 }
-
+// Path`?
 const CLASSROOM_BOOKINGS_KEY = "classroom-bookings";
 
 export function getClassroomBookings(): IClassroomBooking[] {
   return JSON.parse(localStorage.getItem(CLASSROOM_BOOKINGS_KEY) ?? "[]");
 }
-
+// push?????
 export function saveClassroomBooking(booking: IClassroomBooking): void {
   const bookings = getClassroomBookings();
   bookings.push(booking);
@@ -34,8 +34,11 @@ export function isSlotBooked(
 ): boolean {
   const bookings = getClassroomBookings();
   return bookings.some(
-    (b) => b.classroomId === classroomId && b.date === date && b.hour === hour,
-  );
+    (booking) =>
+      booking.classroomId === classroomId &&
+      booking.date === date &&
+      booking.hour === hour,
+  ); // (B) ?? skriv mer // använd booking istället ??
 }
 
 export function getBookingForSlot(
@@ -44,12 +47,17 @@ export function getBookingForSlot(
   hour: number,
 ): IClassroomBooking | undefined {
   return getClassroomBookings().find(
-    (b) => b.classroomId === classroomId && b.date === date && b.hour === hour,
+    (booking) =>
+      booking.classroomId === classroomId &&
+      booking.date === date &&
+      booking.hour === hour,
   );
 }
 
 export function removeClassroomBooking(bookingId: number): void {
-  const bookings = getClassroomBookings().filter((b) => b.id !== bookingId);
+  const bookings = getClassroomBookings().filter(
+    (booking) => booking.id !== bookingId,
+  );
   localStorage.setItem(CLASSROOM_BOOKINGS_KEY, JSON.stringify(bookings));
 }
 
@@ -59,9 +67,9 @@ export function getStudentBookingCount(
   date: string,
 ): number {
   return getClassroomBookings().filter(
-    (b) =>
-      b.studentEmail === studentEmail &&
-      b.classroomId === classroomId &&
-      b.date === date,
+    (booking) =>
+      booking.studentEmail === studentEmail &&
+      booking.classroomId === classroomId &&
+      booking.date === date,
   ).length;
 }

@@ -10,7 +10,7 @@ export interface ICourse {
   startDate: string;
   description: string;
 }
-
+// write comments for this
 export function createCourse(data: Partial<ICourse>): ICourse {
   return {
     id: data.id ?? 0,
@@ -25,4 +25,9 @@ export function createCourse(data: Partial<ICourse>): ICourse {
     description: data.description ?? "",
     ...data,
   } as ICourse;
+}
+
+export enum AttendanceType {
+  Classroom = "Classroom",
+  Distance = "Distance",
 }

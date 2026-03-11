@@ -1,4 +1,4 @@
-import { loadGallery } from "./gallery";
+import { loadGallery } from "../pages/gallery";
 
 describe("gallery page", () => {
   beforeAll(() => {

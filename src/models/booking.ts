@@ -1,4 +1,4 @@
-import { AttendanceType } from "./enums.js";
+import { AttendanceType } from "./course.js";
 
 export interface IBooking {
   id: number;
@@ -7,7 +7,7 @@ export interface IBooking {
   customerName: string;
   billingAddress: string;
   email: string;
-  mobile: string;
+  mobile: number;
   attendanceType: AttendanceType;
 }
 
@@ -19,7 +19,7 @@ export function createBooking(data: Partial<IBooking>): IBooking {
     customerName: data.customerName ?? "",
     billingAddress: data.billingAddress ?? "",
     email: data.email ?? "",
-    mobile: data.mobile ?? "",
+    mobile: data.mobile ?? 0,
     attendanceType: data.attendanceType ?? AttendanceType.Classroom,
     ...data,
   } as IBooking;

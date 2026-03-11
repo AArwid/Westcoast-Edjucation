@@ -1,4 +1,4 @@
-import { setupAdminPage } from "./admin";
+import { setupAdminPage } from "../pages/admin";
 import { adminLogin } from "../utils/auth";
 
 describe("admin page", () => {
@@ -182,7 +182,8 @@ describe("admin page", () => {
     };
     localStorage.setItem("admin-courses", JSON.stringify([course]));
 
-    const { deleteAdminCourse, restoreAdminCourse } = require("./admin") as any;
+    const { deleteAdminCourse, restoreAdminCourse } =
+      require("../pages/admin") as any;
     const courses = JSON.parse(localStorage.getItem("admin-courses") ?? "[]");
     const removed = courses.find((c: any) => c.id === 99);
     const updated = courses.filter((c: any) => c.id !== 99);

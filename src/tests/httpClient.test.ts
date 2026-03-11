@@ -1,5 +1,4 @@
-import { HttpClient } from "./httpClient";
-
+import { HttpClient } from "../utils/httpClient";
 
 describe("HttpClient", () => {
   const client = new HttpClient();
@@ -15,10 +14,11 @@ describe("HttpClient", () => {
   it("appends base URL when passed a relative path and returns parsed JSON", async () => {
     const fakeData = { foo: "bar" };
     (global.fetch as jest.Mock).mockResolvedValue({
-      ok: true,
+      // u know what this means?
+      ok: true, // what does this mean
       json: async () => fakeData,
     });
-
+    // what does foo mean
     const result = await client.get<{ foo: string }>("/test");
     expect(result).toEqual(fakeData);
     expect(global.fetch as jest.Mock).toHaveBeenCalledWith(

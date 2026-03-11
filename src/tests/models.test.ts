@@ -1,6 +1,6 @@
-import { createCourse, ICourse } from "./course";
-import { createBooking, IBooking } from "./booking";
-import { AttendanceType } from "./enums";
+import { createCourse, ICourse } from "../models/course";
+import { createBooking, IBooking } from "../models/booking";
+import { AttendanceType } from "../models/course";
 
 describe("data models", () => {
   test("createCourse returns a complete ICourse", () => {
@@ -39,7 +39,7 @@ describe("data models", () => {
       customerName: "Anna Svensson",
       billingAddress: "Storgatan 1, Göteborg",
       email: "anna@example.com",
-      mobile: "0701234567",
+      mobile: 0,
       attendanceType: AttendanceType.Distance,
     });
 
@@ -50,7 +50,7 @@ describe("data models", () => {
       customerName: "Anna Svensson",
       billingAddress: "Storgatan 1, Göteborg",
       email: "anna@example.com",
-      mobile: "0701234567",
+      mobile: 46703588830,
       attendanceType: AttendanceType.Distance,
     });
   });

@@ -1,11 +1,17 @@
+import {
+  ADMIN_KEY,
+  ADMIN_EMAIL,
+  ADMIN_PASSWORD,
+  USERS_KEY,
+  CURRENT_USER_KEY,
+} from "../config/env.js";
+import {} from "../config/env.js";
+
 export interface IUser {
   name: string;
   email: string;
   password: string;
 }
-
-const USERS_KEY = "we-users";
-const CURRENT_USER_KEY = "we-current-user";
 
 export function getUsers(): IUser[] {
   return JSON.parse(localStorage.getItem(USERS_KEY) ?? "[]");
@@ -46,10 +52,6 @@ export function getCurrentUser(): IUser | null {
 export function isLoggedIn(): boolean {
   return getCurrentUser() !== null;
 }
-
-const ADMIN_KEY = "we-admin-logged-in";
-const ADMIN_EMAIL = "admin";
-const ADMIN_PASSWORD = "password";
 
 export function adminLogin(email: string, password: string): void {
   if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD) {

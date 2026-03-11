@@ -5,7 +5,7 @@ import {
   getCurrentUser,
   isLoggedIn,
   getUsers,
-} from "./auth";
+} from "../utils/auth";
 
 describe("auth utility", () => {
   beforeEach(() => {
@@ -19,7 +19,6 @@ describe("auth utility", () => {
     expect(isLoggedIn()).toBe(true);
     expect(getCurrentUser()?.email).toBe("anna@test.se");
   });
-
   it("throws when registering a duplicate email", () => {
     register("Anna", "anna@test.se", "1234");
     expect(() => register("Anna2", "anna@test.se", "5678")).toThrow(

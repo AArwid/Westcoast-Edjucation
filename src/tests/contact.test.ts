@@ -1,4 +1,4 @@
-import { setupContactForm } from "./contact";
+import { setupContactForm } from "../pages/contact";
 
 describe("contact page", () => {
   beforeEach(() => {

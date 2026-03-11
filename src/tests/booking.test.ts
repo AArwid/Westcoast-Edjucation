@@ -1,4 +1,4 @@
-import { setupBookingForm } from "./booking";
+import { setupBookingForm } from "../pages/booking";
 import { register } from "../utils/auth";
 
 describe("booking page", () => {

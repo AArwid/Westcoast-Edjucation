@@ -1,9 +1,7 @@
 import {
   IClassroom,
   IClassroomBooking,
-  getClassroomBookings,
   saveClassroomBooking,
-  isSlotBooked,
   getBookingForSlot,
   removeClassroomBooking,
   getStudentBookingCount,

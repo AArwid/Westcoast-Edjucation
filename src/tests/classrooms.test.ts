@@ -1,4 +1,4 @@
-import { setupClassroomsPage } from "./classrooms";
+import { setupClassroomsPage } from "../pages/classrooms";
 import { register } from "../utils/auth";
 
 const mockClassrooms = [

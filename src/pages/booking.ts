@@ -1,4 +1,4 @@
-import { AttendanceType } from "../models/enums.js";
+import { AttendanceType } from "../models/course.js";
 import { IBooking } from "../models/booking.js";
 import { isLoggedIn, getCurrentUser } from "../utils/auth.js";
 
@@ -39,7 +39,9 @@ export function setupBookingForm(formId = "booking-form"): void {
 
     const customerName = (
       form.elements.namedItem("customerName") as HTMLInputElement
-    ).value.trim();
+    )// fattar ej nameItem / costumerName /
+    .value
+      .trim();
     const billingAddress = (
       form.elements.namedItem("billingAddress") as HTMLInputElement
     ).value.trim();
@@ -91,7 +93,7 @@ export function setupBookingForm(formId = "booking-form"): void {
         customerName,
         billingAddress,
         email,
-        mobile,
+        mobile: parseInt(mobile),
         attendanceType,
       };
 

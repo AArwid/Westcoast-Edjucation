@@ -4,12 +4,12 @@ import {
   isSlotBooked,
   IClassroomBooking,
 } from "../models/classroom";
-
+//okej assp jag fattar konceptet but why, can delas in/ göras lättare,
 describe("classroom model", () => {
   beforeEach(() => {
     localStorage.clear();
   });
-
+  // TO EQUAL BRO?????
   it("starts with no bookings", () => {
     expect(getClassroomBookings()).toEqual([]);
   });
@@ -25,7 +25,7 @@ describe("classroom model", () => {
       studentEmail: "anna@test.se",
     };
     saveClassroomBooking(booking);
-
+    // tp have length?
     const all = getClassroomBookings();
     expect(all).toHaveLength(1);
     expect(all[0].classroomName).toBe("Sal A1");
@@ -42,7 +42,7 @@ describe("classroom model", () => {
       studentName: "Erik",
       studentEmail: "erik@test.se",
     });
-
+    // är du shakespear? tobe or not tobe?
     expect(isSlotBooked(2, "2026-03-05", 14)).toBe(true);
     expect(isSlotBooked(2, "2026-03-05", 15)).toBe(false);
     expect(isSlotBooked(1, "2026-03-05", 14)).toBe(false);

@@ -11,7 +11,6 @@ export class HttpClient implements IHttpClient {
         `HTTP GET ${fullUrl} failed: ${response.status} ${response.statusText}`,
       );
     }
-
     const data = (await response.json()) as T;
     return data;
   }

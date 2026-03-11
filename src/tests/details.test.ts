@@ -1,4 +1,4 @@
-import { loadCourseDetails } from "./details";
+import { loadCourseDetails } from "../pages/details";
 
 describe("course details page", () => {
   beforeAll(() => {
