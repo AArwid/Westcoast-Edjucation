@@ -1,4 +1,6 @@
-[
+{
+
+ "courses":[
   {
     "id": 1,
     "title": "Fullstack Webbutveckling",
@@ -95,4 +97,19 @@
     "startDate": "2026-10-01",
     "description": "Databasdesign med SQL Server och PostgreSQL. Lär dig normalisering, avancerade queries, indexering och prestandaoptimering."
   }
+],
+
+"classrooms":[ 
+  { "id": 1, "name": "Sal A1", "building": "Hus A", "capacity": 30 },
+  { "id": 2, "name": "Sal A2", "building": "Hus A", "capacity": 20 },
+  { "id": 3, "name": "Sal B1", "building": "Hus B", "capacity": 40 },
+  { "id": 4, "name": "Sal B2", "building": "Hus B", "capacity": 15 },
+  { "id": 5, "name": "Sal C1", "building": "Hus C", "capacity": 25 },
+  { "id": 6, "name": "Sal C2", "building": "Hus C", "capacity": 10 }
+
 ]
+
+
+
+
+}

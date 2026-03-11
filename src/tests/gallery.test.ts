@@ -51,7 +51,7 @@ describe("gallery page", () => {
     expect(cards).toHaveLength(2);
     expect(cards[0].textContent).toContain("Webbutveckling");
     expect(global.fetch).toHaveBeenCalledWith(
-      expect.stringContaining("courses.json"),
+      expect.stringContaining("courses"),
     );
   });
 

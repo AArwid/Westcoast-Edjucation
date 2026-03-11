@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --watch",
     "test": "jest",
     "lint": "tsc --noEmit",
-    "server": "json-server --watch courses.json classrooms.json -port 3000"
+    "server": "json-server --watch data/courses.json"
+
+    
   },
+
+  
+
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "jest": "^29.0.0",
     "jest-environment-jsdom": "^30.2.0",
+    
     "ts-jest": "^29.0.0",
     "typescript": "^4.9.0"
-    
-  },
-  "dependencies": {
-    "dotenv": "^17.3.1"
+
+
   }
 }

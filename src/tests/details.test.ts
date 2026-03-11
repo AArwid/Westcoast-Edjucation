@@ -73,7 +73,7 @@ describe("course details page", () => {
     const container = document.getElementById("course-details");
     expect(container?.classList.contains("details")).toBe(true);
     expect(global.fetch).toHaveBeenCalledWith(
-      expect.stringContaining("courses.json"),
+      expect.stringContaining("courses"),
     );
     expect(container!.textContent).toContain("Testkurs");
     expect(container!.textContent).toContain("T-1");

@@ -38,7 +38,7 @@ export function isSlotBooked(
       booking.classroomId === classroomId &&
       booking.date === date &&
       booking.hour === hour,
-  ); // (B) ?? skriv mer // använd booking istället ??
+  );
 }
 
 export function getBookingForSlot(

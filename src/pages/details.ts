@@ -21,7 +21,7 @@ export async function loadCourseDetails(
   const client = new HttpClient();
   container.innerHTML = `<div class="spinner"></div>`;
 
-  const staticCourses = await client.get<ICourse[]>("courses.json");
+  const staticCourses = await client.get<ICourse[]>("courses");
   const adminCourses: Partial<ICourse>[] = JSON.parse(
     localStorage.getItem("admin-courses") ?? "[]",
   );

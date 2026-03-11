@@ -12,7 +12,7 @@ export async function loadGallery(containerId = "gallery"): Promise<void> {
   container.classList.add("gallery");
   container.innerHTML = `<div class="spinner"></div>`;
 
-  const courses = await client.get<ICourse[]>("courses.json");
+  const courses = await client.get<ICourse[]>("courses");
 
   const deletedIds: number[] = JSON.parse(
     localStorage.getItem("deleted-courses") ?? "[]",

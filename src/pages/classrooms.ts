@@ -33,7 +33,7 @@ export async function setupClassroomsPage(): Promise<void> {
   container.innerHTML = `<div class="spinner"></div>`;
 
   try {
-    classrooms = await client.get<IClassroom[]>("classrooms.json");
+    classrooms = await client.get<IClassroom[]>("classrooms");
   } catch {
     container.innerHTML = '<p class="error">Kunde inte ladda klassrum.</p>';
     return;
@@ -79,7 +79,7 @@ export async function setupClassroomsPage(): Promise<void> {
           msg.className = "success";
           msg.textContent = `Avbokad: ${room.name} kl ${hour}:00–${hour + 1}:00`;
           card.appendChild(msg);
-          setTimeout(() => msg.remove(), 3000);
+          // setTimeout(() => msg.remove(), 3000);
         });
       } else if (existing) {
         slot.classList.add("booked");
@@ -93,7 +93,7 @@ export async function setupClassroomsPage(): Promise<void> {
             warn.className = "error";
             warn.textContent = `Max ${MAX_HOURS_PER_CLASSROOM} timmar per klassrum och dag.`;
             card.appendChild(warn);
-            setTimeout(() => warn.remove(), 3000);
+            // setTimeout(() => warn.remove(), 3000);
             return;
           }
 
@@ -113,7 +113,7 @@ export async function setupClassroomsPage(): Promise<void> {
           msg.className = "success";
           msg.textContent = `Bokad: ${room.name} kl ${hour}:00–${hour + 1}:00`;
           card.appendChild(msg);
-          setTimeout(() => msg.remove(), 3000);
+          // setTimeout(() => msg.remove(), 3000);
         });
       }
 
@@ -156,7 +156,7 @@ function refreshClassroom(
         msg.className = "success";
         msg.textContent = `Avbokad: ${room.name} kl ${hour}:00–${hour + 1}:00`;
         card.appendChild(msg);
-        setTimeout(() => msg.remove(), 3000);
+        // setTimeout(() => msg.remove(), 3000);
       });
     } else if (existing) {
       slot.classList.add("booked");
@@ -170,7 +170,7 @@ function refreshClassroom(
           warn.className = "error";
           warn.textContent = `Max ${MAX_HOURS_PER_CLASSROOM} timmar per klassrum och dag.`;
           card.appendChild(warn);
-          setTimeout(() => warn.remove(), 3000);
+          // setTimeout(() => warn.remove(), 3000);
           return;
         }
 
@@ -190,7 +190,7 @@ function refreshClassroom(
         msg.className = "success";
         msg.textContent = `Bokad: ${room.name} kl ${hour}:00–${hour + 1}:00`;
         card.appendChild(msg);
-        setTimeout(() => msg.remove(), 3000);
+        // setTimeout(() => msg.remove(), 3000);
       });
     }
 

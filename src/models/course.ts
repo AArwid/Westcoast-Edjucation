@@ -10,7 +10,7 @@ export interface ICourse {
   startDate: string;
   description: string;
 }
-// write comments for this
+
 export function createCourse(data: Partial<ICourse>): ICourse {
   return {
     id: data.id ?? 0,

@@ -1,4 +1,4 @@
-export const API_BASE_URL = "./data/";
+export const API_BASE_URL = "http://localhost:3000/";
 export const ADMIN_KEY = "we-admin-logged-in";
 export const ADMIN_EMAIL = "admin";
 export const ADMIN_PASSWORD = "password";
