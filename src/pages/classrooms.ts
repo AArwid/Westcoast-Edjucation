@@ -79,7 +79,7 @@ export async function setupClassroomsPage(): Promise<void> {
           msg.className = "success";
           msg.textContent = `Avbokad: ${room.name} kl ${hour}:00–${hour + 1}:00`;
           card.appendChild(msg);
-          // setTimeout(() => msg.remove(), 3000);
+          // setTimeout(() => msg.remove());
         });
       } else if (existing) {
         slot.classList.add("booked");
